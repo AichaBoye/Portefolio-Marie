@@ -2,12 +2,22 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
-<title>Marie Aissatou Boye — Humanités Numériques &amp; Gestion de projet</title>
+<title>Marie Aissatou Boye — Gestion de projet digital, web analytics &amp; humanités numériques</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Portfolio de Marie Aissatou Boye, étudiante en Master 2 Humanités Numériques — gestion de projet, data, IA &amp; culture." />
+<meta name="description" content="Portfolio de Marie Aissatou Boye, étudiante en Master 2 Humanités numériques : gestion de projet digital, web analytics, data, IA et culture. À la recherche d'un stage de 4 à 6 mois à partir de janvier 2027." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Google tag (gtag.js) : placé dans le head, comme il se doit -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y93KL46C9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3Y93KL46C9');
+</script>
+
 <style>
   :root{
     --paper:#F6F2E9;
@@ -24,6 +34,7 @@
   body{margin:0;background:var(--paper);color:var(--ink);font-family:'Work Sans', sans-serif;font-weight:400;line-height:1.55;}
   h1,h2,h3,.brand,.tab-btn{font-family:'Fraunces', serif;color:var(--ink);letter-spacing:0.2px;}
   a{color:inherit;text-decoration:none;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--wine);outline-offset:3px;}
   ul{list-style:none;margin:0;padding:0;}
   img{max-width:100%;display:block;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
@@ -43,10 +54,11 @@
   .hero{padding:76px 0 64px;border-bottom:1px solid var(--paper-line);}
   .hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start;}
   .eyebrow{font-size:14px;color:var(--wine);margin:0 0 10px;}
-  h1{font-size:44px;font-weight:500;margin:0 0 18px;line-height:1.15;}
+  h1{font-size:44px;font-weight:500;margin:0 0 10px;line-height:1.15;}
+  .role{font-family:'Fraunces', serif;font-size:19px;color:var(--wine);margin:0 0 18px;}
   .lede{font-size:17px;color:var(--ink-soft);max-width:52ch;margin:0 0 28px;}
   .hero-buttons{display:flex;flex-wrap:wrap;margin-bottom:22px;}
-  .hero-buttons .btn{margin-right:14px;}
+  .hero-buttons .btn{margin-right:14px;margin-bottom:10px;}
   .btn{display:inline-block;padding:12px 22px;font-size:15px;border-radius:var(--radius);border:1px solid var(--ink);transition:background .2s, color .2s;}
   .btn.primary{background:var(--ink);color:var(--paper);}
   .btn.primary:hover{background:var(--wine);border-color:var(--wine);}
@@ -75,9 +87,11 @@
   .about-card ul li{font-size:14px;color:var(--ink-soft);padding-left:14px;position:relative;margin-bottom:6px;}
   .about-card ul li::before{content:"—";position:absolute;left:0;color:var(--gold);}
 
-  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 48px;}
   .skills-group h3{font-size:16px;margin:0 0 14px;border-bottom:1px solid var(--paper-line);padding-bottom:8px;}
   .skills-group ul li{font-size:14px;color:var(--ink-soft);padding:6px 0;border-bottom:1px dashed var(--paper-line);}
+  .skills-group ul li strong{font-weight:500;color:var(--ink);}
+  .skills-note{margin:26px 0 0;font-size:13.5px;color:var(--ink-soft);}
 
   .tabs{display:flex;flex-wrap:wrap;margin-bottom:30px;}
   .tab-btn{font-size:14px;padding:8px 16px;margin:0 8px 8px 0;background:transparent;border:1px solid var(--paper-line);border-radius:20px;cursor:pointer;color:var(--ink-soft);}
@@ -90,6 +104,8 @@
   .card-flag{font-size:12px;color:var(--wine);margin-bottom:8px;}
   .card h3{font-size:18px;margin:0 0 8px;font-weight:500;}
   .card .tagline{font-size:14.5px;color:var(--ink-soft);margin:0 0 14px;}
+  .card .role-line{font-size:13.5px;color:var(--ink);margin:0 0 12px;}
+  .card .role-line b{font-weight:600;}
   .card ul{margin:0 0 14px;}
   .card ul li{font-size:13.8px;color:var(--ink-soft);margin-bottom:9px;padding-left:14px;position:relative;}
   .card ul li::before{content:"·";position:absolute;left:0;color:var(--gold);font-weight:700;}
@@ -102,6 +118,7 @@
   .contact-text p{color:var(--ink-soft);max-width:48ch;}
   .contact-list li{font-size:15px;margin-bottom:10px;}
   .contact-list a:hover{color:var(--wine);}
+  .contact-text .btn{margin:6px 0 22px;}
 
   footer{padding:28px 0;text-align:center;font-size:13px;color:var(--ink-soft);}
 
@@ -119,15 +136,6 @@
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y93KL46C9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3Y93KL46C9');
-</script>
 
 <body>
 
@@ -151,25 +159,28 @@
     <div>
       <p class="eyebrow">Master 2 Humanités Numériques — UPHF</p>
       <h1>Bonjour, je suis Marie</h1>
+      <p class="role">Gestion de projet digital · Web analytics · Data &amp; IA</p>
       <p class="lede">
         Je conçois et je pilote des projets qui relient culture, données et numérique :
-        structuration de bibliothèques numériques, analyse de données, gestion de projet
-        de l'idée au budget. Après une licence d'Histoire, j'ai ajouté à ma formation le
-        développement web et l'analyse de données pour transformer des corpus complexes
-        en dispositifs concrets.
+        structuration de bibliothèques numériques, gestion de sites web, analyse de données,
+        gestion de projet de l'idée au budget. Après une licence d'Histoire, j'ai ajouté à ma
+        formation le développement web, le web analytics et l'analyse de données pour
+        transformer des corpus complexes en dispositifs concrets.
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn primary">Voir mes projets</a>
+        <a href="CV-Marie-Aissatou-Boye.pdf" class="btn ghost" download>Télécharger mon CV</a>
         <a href="#contact" class="btn ghost">Me contacter pour un stage</a>
       </div>
-      <p class="status">Disponible pour un stage de fin d'études (minimum 4 mois), à partir de mars 2027 · Mobile sur toute la France</p>
+      <p class="status">Disponible pour un stage de fin d'études de 4 à 6 mois, à partir de janvier 2027 · Mobile sur toute la France</p>
     </div>
 
     <div class="dossier">
       <h3>Ce que je cherche</h3>
       <ol>
-        <li>Un stage en gestion de projet numérique, data ou culture</li>
-        <li>Des projets concrets, de la conception au suivi documentaire</li>
+        <li>Un stage en gestion de projet digital ou en transformation digitale</li>
+        <li>Un stage en web analytics, gestion de site web (webmaster) ou analyse de données</li>
+        <li>Des projets concrets autour de l'IA, de la culture et de la gestion des connaissances</li>
         <li>Une équipe où allier rigueur méthodologique et sens créatif</li>
       </ol>
     </div>
@@ -191,9 +202,9 @@
             Hauts-de-France, après une licence d'Histoire à l'Université de Lille, je me
             situe à la croisée de la recherche, de la culture et du numérique. Mon parcours
             m'a amenée à structurer des corpus et des archives autant qu'à développer des
-            interfaces (HTML, CSS, JavaScript, PHP, MySQL) et à analyser des données
-            (Python, R, JASP), avec un intérêt particulier pour l'intelligence artificielle
-            et ses usages culturels.
+            sites et des interfaces (HTML, CSS, JavaScript, PHP, WordPress) et à analyser des
+            données (Excel, R, JASP, Google Analytics), avec un intérêt particulier pour
+            l'intelligence artificielle et ses usages culturels.
           </p>
           <p>
             En stage au CNRS (CERLIS/ARDIS), je conçois la bibliothèque numérique de
@@ -205,11 +216,18 @@
             réponse à l'appel France 2030 pour un dispositif d'assistance à l'écriture
             scénaristique.
           </p>
+          <p>
+            Je prépare actuellement la certification Google Analytics et je me forme à
+            l'analyse de données, pour compléter mon profil culturel et méthodologique par
+            des compétences de mesure et de pilotage.
+          </p>
           <div class="tags">
             <span>Humanités numériques</span>
-            <span>Gestion de projet</span>
-            <span>IA &amp; éthique</span>
+            <span>Gestion de projet digital</span>
+            <span>Web analytics</span>
+            <span>Gestion de sites web</span>
             <span>Analyse de données</span>
+            <span>IA &amp; prompt engineering</span>
             <span>UX / Persona</span>
           </div>
         </div>
@@ -218,14 +236,15 @@
             <h3>Forces principales</h3>
             <ul>
               <li>Relier théorie, technique et créativité</li>
-              <li>Rigueur méthodologique (structuration, analyse)</li>
+              <li>Rigueur méthodologique (structuration, analyse, documentation)</li>
               <li>Piloter un projet de l'idée au budget</li>
+              <li>Expliquer le numérique à des publics non spécialistes</li>
             </ul>
           </div>
           <div class="about-card">
             <h3>Ce que je cherche</h3>
             <ul>
-              <li>Stage en gestion de projet, data, IA ou culture numérique</li>
+              <li>Stage en gestion de projet digital, web, data, IA ou culture numérique</li>
               <li>Un encadrement technique et une vraie autonomie</li>
               <li>Un environnement curieux et exigeant</li>
             </ul>
@@ -242,37 +261,49 @@
         <p>Techniques, méthodologiques et humaines.</p>
       </div>
       <div class="skills-grid">
+
         <div class="skills-group">
-          <h3>Techniques</h3>
+          <h3>Web &amp; développement</h3>
           <ul>
-            <li>HTML · CSS · JavaScript · PHP · MySQL · WordPress</li>
-            <li>Omeka S · Nakala · Tropy · Zotero · Dublin Core</li>
-            <li>Python · R · C (notions) · JASP · Orange Data Mining</li>
-            <li>Git &amp; GitHub</li>
-            <li>Arduino · prototypage électronique</li>
+            <li><strong>Développement web :</strong> HTML · CSS · JavaScript · PHP · MySQL (notions) · Vue.js (notions)</li>
+            <li><strong>Gestion de sites web :</strong> WordPress · Omeka S</li>
+            <li><strong>Versionnage :</strong> Git &amp; GitHub</li>
+            <li><strong>Prototypage électronique :</strong> Arduino</li>
           </ul>
         </div>
+
         <div class="skills-group">
-          <h3>Humanités numériques</h3>
+          <h3>Data &amp; analytics</h3>
           <ul>
-            <li>Structuration et indexation de corpus</li>
-            <li>Traitement de données textuelles</li>
-            <li>Encodage de textes (XML / TEI)</li>
-            <li>Éthique de l'IA</li>
-            <li>Veille scientifique et documentaire</li>
+            <li><strong>Web analytics :</strong> Google Analytics (certification en cours) · Adobe Analytics (notions)</li>
+            <li><strong>Tableurs :</strong> Excel — tableaux croisés dynamiques, Power Query, tableaux de bord (formation en cours)</li>
+            <li><strong>Statistiques :</strong> R · JASP · Orange Data Mining · Python</li>
+            <li><strong>Visualisation :</strong> graphiques, cartographie de données</li>
+            <li>Formation en data analytics en cours</li>
           </ul>
         </div>
+
+        <div class="skills-group">
+          <h3>Humanités numériques &amp; IA</h3>
+          <ul>
+            <li><strong>Documentation :</strong> Nakala · Huma-Num · Tropy · Zotero · Dublin Core</li>
+            <li><strong>Corpus :</strong> structuration, indexation, traitement de données textuelles, encodage XML / TEI</li>
+            <li><strong>IA :</strong> fonctionnement des LLM, prompt engineering, éthique et usage responsable de l'IA</li>
+            <li><strong>Veille</strong> scientifique et documentaire</li>
+          </ul>
+        </div>
+
         <div class="skills-group">
           <h3>Gestion de projet &amp; UX</h3>
           <ul>
-            <li>Cadrage de projet (QQOQCCP, cahier des charges)</li>
-            <li>Analyse SWOT, 5 pourquoi, diagramme d'Ishikawa</li>
-            <li>Matrice de sélection, analyse des risques, méthodes agiles</li>
-            <li>Modèle utilisateur, persona, storyboard, diagramme de cas d'utilisation</li>
-            <li>Analyse des tâches, accessibilité, expérience utilisateur, Moqups</li>
-            <li>Systèmes sensibles au contexte &amp; Internet des objets</li>
+            <li><strong>Méthodes :</strong> Scrum, méthodes agiles, cycle en cascade, diagramme de Gantt</li>
+            <li><strong>Cadrage :</strong> QQOQCCP, cahier des charges, analyse SWOT, 5 pourquoi, diagramme d'Ishikawa, matrice de sélection, analyse des risques</li>
+            <li><strong>Outils :</strong> Trello · Monday · Jira · Miro · ProjectLibre</li>
+            <li><strong>UX :</strong> persona, storyboard, cas d'utilisation, accessibilité, Figma, Moqups, Excalidraw</li>
+            <li><strong>Création :</strong> Photoshop · InDesign (initiation)</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
@@ -292,6 +323,8 @@
         <button class="tab-btn" data-tab="data">Data</button>
         <button class="tab-btn" data-tab="ux">UX &amp; Innovation</button>
         <button class="tab-btn" data-tab="hardware">Hardware</button>
+        <!-- Quand tu ajoutes le projet de web analytics, ajoute aussi ce bouton :
+        <button class="tab-btn" data-tab="analytics">Web analytics</button> -->
       </div>
 
       <div class="projects-grid" id="projectsGrid">
@@ -301,13 +334,14 @@
             <p class="card-flag">Projet phare — projet académique</p>
             <h3>Scénar'IA — plateforme d'assistance à l'écriture scénaristique</h3>
             <p class="tagline">Réponse complète à l'appel à projets France 2030 « Transition numérique de la Culture », réalisée dans le cadre d'un cours de gestion de projet : cadrage, budget, partenaires et jalons.</p>
+            <p class="role-line"><b>Mon rôle :</b> cheffe de projet</p>
             <ul>
-              <li>Cheffe de projet : cohérence globale, gestion des ressources, suivi des objectifs et des jalons (EC1 à EC4, sur 36 mois)</li>
+              <li>Cohérence globale, gestion des ressources, suivi des objectifs et des jalons (EC1 à EC4, sur 36 mois)</li>
               <li>Budget total du projet : 1 505 205 € — 95 % en ressources humaines, financé à 50 % par la subvention PIA France 2030</li>
               <li>Partenaires simulés : Université Paris-Saclay (R&amp;D), CNC, Région Île-de-France</li>
               <li>Objectifs : accompagner 5 000 utilisateurs en 3 ans, réduire de 20 à 30 % le temps de structuration d'un scénario, intégrer une détection des biais de représentation</li>
             </ul>
-            <div class="card-tags"><span>Gestion de projet</span><span>IA &amp; cinéma</span><span>Éthique</span></div>
+            <div class="card-tags"><span>Gestion de projet digital</span><span>IA &amp; cinéma</span><span>Budget</span><span>Éthique</span></div>
           </div>
         </article>
 
@@ -316,13 +350,15 @@
             <p class="card-flag">Stage CNRS (CERLIS/ARDIS) — en cours</p>
             <h3>ART-e-FACT — bibliothèque numérique de recherche</h3>
             <p class="tagline">Conception complète d'une bibliothèque numérique de recherche pour un corpus multimodal en humanités numériques, mémoire de Master 1 à l'appui.</p>
+            <p class="role-line"><b>Mon rôle :</b> assistante de projet en humanités numériques · <b>Outils :</b> Omeka S, Nakala</p>
             <ul>
               <li>Conception de l'architecture des collections sous Omeka S et structuration du workflow documentaire entre Nakala et Omeka S</li>
               <li>Gestion des bases de données et de la documentation du corpus : notices normalisées, indexation, version bilingue du site</li>
               <li>Gestion des métadonnées et rédaction du plan de gestion des données (data management plan) sur Nakala/Huma-Num</li>
               <li>Développement d'une carte interactive pour la valorisation du corpus auprès de l'équipe de recherche</li>
+              <li>Documentation et gestion des connaissances de l'équipe de recherche (knowledge management)</li>
             </ul>
-            <div class="card-tags"><span>Bibliothèque numérique</span><span>Métadonnées</span><span>Omeka S / Nakala</span></div>
+            <div class="card-tags"><span>Bibliothèque numérique</span><span>Métadonnées</span><span>Gestion des connaissances</span><span>Omeka S / Nakala</span></div>
             <a href="https://ethno-graphies.huma-num.fr/s/art-e-fact/page/accueil" class="card-link" target="_blank" rel="noopener noreferrer">Voir la bibliothèque numérique →</a>
           </div>
         </article>
@@ -332,12 +368,13 @@
             <p class="card-flag">En lien avec mon poste de monitrice à la BU UPHF</p>
             <h3>Conseils BU — mini-site pour les étudiants de L1/L2</h3>
             <p class="tagline">Site conçu et développé pour aider les étudiants à bien démarrer à la bibliothèque universitaire et à découvrir ses services.</p>
+            <p class="role-line"><b>Mon rôle :</b> conception, développement et rédaction · <b>Outils :</b> HTML, CSS, JavaScript, GitHub Pages</p>
             <ul>
               <li>Deux parcours de conseils : bien débuter à la BU en L1, et découvrir les services proposés (ressources numériques, prêt de matériel, salles de travail en groupe, aide à la recherche documentaire)</li>
               <li>Conception et intégration complètes du site (structure, contenu, responsive design), hébergé sur GitHub Pages</li>
               <li>Liens directs vers le catalogue, l'application mobile et le contact de la BU pour un accès rapide à l'information</li>
             </ul>
-            <div class="card-tags"><span>Développement web</span><span>Documentation</span><span>Médiation</span></div>
+            <div class="card-tags"><span>Développement web</span><span>Gestion de site web</span><span>Documentation</span><span>Médiation</span></div>
             <a href="https://aichaboye.github.io/bu-conseils-site/" class="card-link" target="_blank" rel="noopener noreferrer">Voir le site →</a>
           </div>
         </article>
@@ -347,13 +384,15 @@
             <p class="card-flag">Projet de groupe — cours de gestion de projet</p>
             <h3>Equiteinte — conception d'une teinte adaptable pour la peau</h3>
             <p class="tagline">Projet mené en groupe pour appliquer, du début à la fin, la conduite d'un projet telle qu'elle se pratique en entreprise : cadrage, analyse, planification et suivi.</p>
+            <p class="role-line"><b>Outils :</b> ProjectLibre, Monday, Miro</p>
             <ul>
               <li>Rédaction du cahier des charges du projet</li>
               <li>Analyse du problème avec la méthode QQOQCCP et un diagramme d'Ishikawa pour identifier les causes racines</li>
               <li>Analyse SWOT pour cadrer les forces, faiblesses, opportunités et menaces du projet</li>
+              <li>Matrice de sélection des solutions et analyse des risques</li>
               <li>Planification et suivi du projet sous ProjectLibre ; organisation du travail d'équipe et du calendrier avec Monday et Miro</li>
             </ul>
-            <div class="card-tags"><span>Gestion de projet</span><span>Cahier des charges</span><span>ProjectLibre</span></div>
+            <div class="card-tags"><span>Gestion de projet</span><span>Cahier des charges</span><span>Analyse des risques</span><span>ProjectLibre</span></div>
           </div>
         </article>
 
@@ -362,15 +401,18 @@
             <p class="card-flag">Projet personnel</p>
             <h3>AIsha — agent IA pour imaginer des projets culturels</h3>
             <p class="tagline">Un agent conversationnel qui aide les lieux culturels à imaginer des événements originaux en quelques questions simples.</p>
+            <p class="role-line"><b>Mon rôle :</b> conception complète, en autonomie</p>
             <ul>
-              <li>Conception seule du projet : cadrage des fonctionnalités et réflexion éthique sur l'usage de l'IA en médiation culturelle</li>
+              <li>Cadrage des fonctionnalités de l'agent</li>
+              <li>Réflexion éthique sur l'usage de l'IA en médiation culturelle</li>
             </ul>
-            <div class="card-tags"><span>IA &amp; culture</span><span>Éthique</span></div>
+            <div class="card-tags"><span>IA &amp; culture</span><span>Prompt engineering</span><span>Éthique</span></div>
           </div>
         </article>
 
         <article class="card" data-cat="data">
           <div class="card-body">
+            <p class="card-flag">Projet pédagogique</p>
             <h3>Analyse statistique des visiteurs du Louvre</h3>
             <p class="tagline">Exploration d'un jeu de données de fréquentation du musée pour mieux comprendre les publics et leurs comportements.</p>
             <ul>
@@ -378,7 +420,7 @@
               <li>Statistiques descriptives et visualisations (histogrammes, diagrammes en barres, cartes de chaleur) pour repérer pics de fréquentation et profils dominants</li>
               <li>Recommandations formulées : ajustement des horaires, ciblage de publics sous-représentés, médiation sur les périodes creuses</li>
             </ul>
-            <div class="card-tags"><span>Statistiques</span><span>Data culturelle</span><span>Visualisation</span></div>
+            <div class="card-tags"><span>Analyse de données</span><span>Statistiques</span><span>Visualisation</span></div>
           </div>
         </article>
 
@@ -395,7 +437,6 @@
           </div>
         </article>
 
-
         <article class="card" data-cat="hardware">
           <div class="card-body">
             <p class="card-flag">La Forêt Interactive — Master 1, cours de design</p>
@@ -407,7 +448,7 @@
               <li>Itération technique : la première piste (pompe à air + sifflet) manquait de puissance sonore, remplacée par la solution électromécanique finale</li>
               <li>J'ai également conçu et développé le site collectif « La Forêt Interactive » qui présente les 4 biobots réalisés par la promotion</li>
             </ul>
-            <div class="card-tags"><span>Arduino</span><span>Prototypage</span><span>Design d'interaction</span></div>
+            <div class="card-tags"><span>Arduino</span><span>Prototypage</span><span>Développement web</span><span>Design d'interaction</span></div>
             <a href="https://boyemy-cocq.alwaysdata.net/foret/index.php/projets/projet-groupe-1/" class="card-link" target="_blank" rel="noopener noreferrer">Voir le projet en détail →</a>
           </div>
         </article>
@@ -421,17 +462,68 @@
               <li>Analyse critique des IA « empathiques » à l'écran confrontées à l'IA réelle : reconnaissance d'émotions et apprentissage par renforcement, sans vécu subjectif ni mémoire personnelle</li>
               <li>Le cinéma comme laboratoire symbolique des enjeux réels de contrôle, de responsabilité et de statut moral des machines</li>
             </ul>
-            <div class="card-tags"><span>Cinéma</span><span>Culture numérique</span><span>Recherche</span></div>
+            <div class="card-tags"><span>Cinéma</span><span>IA &amp; éthique</span><span>Recherche</span></div>
           </div>
         </article>
 
-        <article class="card" data-cat="ux">
+        <!--
+        =====================================================================
+        MODÈLES DE NOUVEAUX PROJETS
+        Quand un projet est réellement terminé, retire les balises de commentaire
+        autour de son modèle et remplace les textes entre crochets.
+        N'ajoute que ce que tu as vraiment fait et que tu sais expliquer.
+        =====================================================================
+
+        --- Projet de web analytics (sur ton portfolio ou le site Conseils BU) ---
+        <article class="card" data-cat="analytics">
           <div class="card-body">
-            <h3>Conception d'un objet technique innovant</h3>
-            <p class="tagline">Projet d'anticipation autour d'un objet connecté futuriste, pensé pour répondre à un besoin réel et encore non couvert. Les détails techniques sont volontairement gardés confidentiels.</p>
-            <div class="card-tags"><span>Innovation</span><span>R&amp;D</span><span>UX</span></div>
+            <p class="card-flag">Projet personnel</p>
+            <h3>[Titre : par ex. Analyse de l'audience de mon portfolio]</h3>
+            <p class="tagline">[Une phrase : la question posée et l'objectif]</p>
+            <p class="role-line"><b>Outils :</b> Google Analytics, [Looker Studio, etc.]</p>
+            <ul>
+              <li>[Ce que tu as mis en place : événements suivis, objectifs de conversion]</li>
+              <li>[Ce que tu as constaté : pages les plus vues, sources de trafic, etc.]</li>
+              <li>[Tes recommandations et ce que tu as changé ensuite]</li>
+            </ul>
+            <div class="card-tags"><span>Web analytics</span><span>Google Analytics</span><span>Tableau de bord</span></div>
+            <a href="[lien vers le rapport ou une capture]" class="card-link" target="_blank" rel="noopener noreferrer">Voir le rapport →</a>
           </div>
         </article>
+
+        --- Projet de data analyse complet (données ouvertes ou tableau de bord Excel) ---
+        <article class="card" data-cat="data">
+          <div class="card-body">
+            <p class="card-flag">Projet personnel</p>
+            <h3>[Titre du projet]</h3>
+            <p class="tagline">[La question de départ]</p>
+            <p class="role-line"><b>Outils :</b> [Excel / Power Query / R / Python]</p>
+            <ul>
+              <li>Données : [source, taille, période]</li>
+              <li>Nettoyage et préparation : [ce que tu as corrigé ou transformé]</li>
+              <li>Analyse et visualisations : [méthodes et graphiques]</li>
+              <li>Conclusions et recommandations : [ce que les données montrent]</li>
+            </ul>
+            <div class="card-tags"><span>Analyse de données</span><span>Visualisation</span><span>[Outil]</span></div>
+            <a href="[lien GitHub]" class="card-link" target="_blank" rel="noopener noreferrer">Voir le projet sur GitHub →</a>
+          </div>
+        </article>
+
+        --- Projet IA et prompt engineering ---
+        <article class="card" data-cat="ia">
+          <div class="card-body">
+            <p class="card-flag">Projet personnel</p>
+            <h3>[Titre : par ex. Comparer des assistants d'IA sur une même tâche]</h3>
+            <p class="tagline">[Le problème et la démarche]</p>
+            <ul>
+              <li>Protocole : [tâche testée, consignes utilisées, grille d'évaluation]</li>
+              <li>Résultats : [ce que tu as observé]</li>
+              <li>Limites et enjeux éthiques : [ta réflexion]</li>
+            </ul>
+            <div class="card-tags"><span>Prompt engineering</span><span>IA</span><span>Éthique</span></div>
+          </div>
+        </article>
+        -->
 
       </div>
     </div>
@@ -445,7 +537,8 @@
       </div>
       <div class="contact-grid">
         <div class="contact-text">
-          <p>Pour toute opportunité de stage, collaboration ou question, vous pouvez me contacter directement :</p>
+          <p>Pour toute opportunité de stage à partir de janvier 2027, collaboration ou question, vous pouvez me contacter directement :</p>
+          <a href="CV-Marie-Aissatou-Boye.pdf" class="btn primary" download>Télécharger mon CV</a>
           <ul class="contact-list">
             <li>Email : <a href="mailto:marieaissatouboye@gmail.com">marieaissatouboye@gmail.com</a></li>
             <li>Téléphone : <a href="tel:+33758152700">07 58 15 27 00</a></li>
@@ -488,6 +581,14 @@
       });
     });
   });
+
+  // Suivi Google Analytics : clics sur le CV et sur le contact (utile pour ton futur projet de web analytics)
+  document.querySelectorAll('a[download]').forEach(a => a.addEventListener('click', () => {
+    if (typeof gtag === 'function') gtag('event', 'download_cv');
+  }));
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => a.addEventListener('click', () => {
+    if (typeof gtag === 'function') gtag('event', 'click_email');
+  }));
 </script>
 
 </body>
