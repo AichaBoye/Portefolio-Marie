@@ -349,7 +349,7 @@ Cette complémentarité me permet de ne pas aborder un projet uniquement sous l�
             <a href="https://ethno-graphies.huma-num.fr/s/art-e-fact/page/accueil" class="card-link" target="_blank" rel="noopener noreferrer">Voir la bibliothèque numérique →</a>
           </div>
         </article>
-        <article class="card" data-cat="gestion">
+        <article class="card" data-cat="gestion ia data">
   <div class="card-body">
     <p class="card-flag">Projet personnel — Knowledge Management & Microsoft 365</p>
 
@@ -655,8 +655,9 @@ Cette complémentarité me permet de ne pas aborder un projet uniquement sous l�
       btn.classList.add('active');
       const cat = btn.dataset.tab;
       cards.forEach(card => {
-        card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
-      });
+  const categories = card.dataset.cat.split(' ');
+  card.classList.toggle('hidden', cat !== 'all' && !categories.includes(cat));
+});
     });
   });
 
